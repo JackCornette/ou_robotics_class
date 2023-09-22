@@ -1,0 +1,2 @@
+project_1
+-DCATKIN_DEVEL_PREFIX=/home/jack/proj1ws/devel -DCMAKE_INSTALL_PREFIX=/home/jack/proj1ws/install -G Unix Makefiles
