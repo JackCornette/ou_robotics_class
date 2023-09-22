@@ -1,8 +1,0 @@
-prefix=/home/jack/proj1ws/install
-
-Name: gazebo_launch
-Description: Description of gazebo_launch
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: rospy message_runtime std_msgs geometry_msgs sensor_msgs pynput kobuki_msgs

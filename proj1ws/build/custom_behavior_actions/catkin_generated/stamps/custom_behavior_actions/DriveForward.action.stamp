@@ -1,8 +1,0 @@
-#goal         
-int64 speed
----
-#result
-bool success
----
-#feedback
-float32 progress
