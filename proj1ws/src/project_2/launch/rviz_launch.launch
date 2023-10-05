@@ -1,0 +1,6 @@
+<launch>
+
+  <!-- From turtlebot_rviz_launchers/launch/view_navigation.launch-->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find project_1)/launch/navigation.rviz"/>
+
+</launch>
