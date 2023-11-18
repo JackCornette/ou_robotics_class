@@ -1,0 +1,8 @@
+prefix=/home/corn0038/ou_robotics_class/proj1ws/install
+
+Name: major_project
+Description: Description of major_project
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs actionlib cv2 geometry_msgs cv_bridge
