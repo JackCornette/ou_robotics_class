@@ -1,0 +1,8 @@
+prefix=/home/corn0038/ou_robotics_class/proj1ws/install
+
+Name: project_1
+Description: Description of project_1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy message_runtime std_msgs geometry_msgs sensor_msgs pynput kobuki_msgs
