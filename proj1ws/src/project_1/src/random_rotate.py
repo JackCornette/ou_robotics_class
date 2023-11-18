@@ -9,7 +9,7 @@ import math
 
 
 class RandomRotate(object):
-    def __init__(self, speed=0.5, hz=10):
+    def __init__(self, speed=0.25, hz=10):
         
         self.pause = False
         self.max_distance = 1.0  # rotate every 1ft

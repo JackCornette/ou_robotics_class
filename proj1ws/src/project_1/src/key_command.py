@@ -47,10 +47,10 @@ class KeyCommand(object):
 
             if not self.pause:
                 if key.char == 'w':
-                    self.twist.linear.x = 1.0  # Forward motion
+                    self.twist.linear.x = 0.35  # Forward motion
                     self.move = True
                 elif key.char == 's':
-                    self.twist.linear.x = -0.75  # Backward motion
+                    self.twist.linear.x = -0.25  # Backward motion
                     self.move = True
                 if key.char == 'a':
                     self.twist.angular.z = 0.75  # Turn left

@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist, Vector3
 
 
 class DriveForward(object):
-    def __init__(self, speed=0.75, hz=2):
+    def __init__(self, speed=0.25, hz=2):
         
         self.speed = speed
         self.pause = False

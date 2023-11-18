@@ -1,0 +1,24 @@
+<launch>
+  <!-- set Turtlebot arguments -->
+  <arg name="base"       value="$(optenv TURTLEBOT_BASE kobuki)"/> <!-- create, roomba -->
+  <arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>    <!-- /proc/acpi/battery/BAT0 -->
+  <arg name="gui"        default="true"/>
+  <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
+  <arg name="3d_sensor"  value="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- kinect, asus_xtion_pro -->
+  <arg name="serialport"        default="$(env TURTLEBOT_SERIAL_PORT)"  doc="used by create to configure the port it is connected on [/dev/ttyUSB0, /dev/ttyS0]"/>
+
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+
+  <!-- Launch AMCL (Adaptive Monte Carlo Localization) for robot localization -->
+  <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch">
+      <arg name="map_file" value="/home/corn0038/b4_map.yaml" />
+  </include>
+
+  <!-- Launch the custom goal_publisher node -->
+  <node name="goal_publisher" pkg="major_project" type="goal_publisher.py" output="screen" />
+  <node name="aruco_detector" pkg="major_project" type="aruco_detector3.py" output="screen" />
+
+  <!-- Include RViz configuration for navigation -->
+  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
+</launch>
+

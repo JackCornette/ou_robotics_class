@@ -9,12 +9,12 @@ import math
 from random import uniform
 
 class AvoidEscape(object):
-    def __init__(self, speed=1.0, hz=10):
+    def __init__(self, speed=0.25, hz=10):
         
         self.pause = False
         self.rotating = False
         self.min_distance_threshold = 1.0  # Minimum distance to trigger obstacle avoidance
-        self.angular_velocity = 0.75  # Angular velocity for turning
+        self.angular_velocity = 0.5  # Angular velocity for turning
 
         self.turning_around = False
         self.left_obstacle_detected = False
